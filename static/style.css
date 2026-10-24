@@ -1,0 +1,10 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; background: #f4f7fb; color: #172033; }
+body { margin: 0; } header { background: #183153; color: white; padding: 2rem max(1rem, calc((100% - 1100px)/2)); }
+h1 { margin: 0 0 .25rem; } main { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.panel, .cards div { background: white; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 2px 10px #12233d12; }
+label { font-weight: 600; margin-right: .5rem; } input { padding: .65rem; border: 1px solid #bbc6d6; border-radius: 6px; margin: .25rem .5rem .25rem 0; }
+button { padding: .65rem 1rem; color: white; background: #1769aa; border: 0; border-radius: 6px; cursor: pointer; } button:disabled { opacity: .5; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; } .cards div { display: flex; flex-direction: column; }
+.cards strong { font-size: 1.5rem; } .cards span { color: #58677d; } .table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; } th, td { text-align: left; padding: .65rem; border-bottom: 1px solid #e7ebf1; } th { color: #58677d; }
+.error { color: #b42318; } .success { color: #087443; } @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }

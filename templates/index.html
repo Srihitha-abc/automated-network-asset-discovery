@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Network Asset Discovery</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header><h1>Network Asset Discovery</h1><p>Authorized asset and service inventory</p></header>
+  <main>
+    <section class="panel auth">
+      <label for="api-key">API key</label><input id="api-key" type="password" placeholder="X-API-Key">
+      <button id="save-key">Connect</button><span id="auth-message"></span>
+    </section>
+    <section class="panel controls">
+      <label for="target">Authorized CIDR</label><input id="target" placeholder="192.168.1.0/24">
+      <button id="scan">Start scan</button><span id="scan-message"></span>
+      <input id="search" placeholder="Search IP or hostname">
+      <input id="service" placeholder="Filter service">
+    </section>
+    <section class="cards"><div><strong id="asset-count">0</strong><span>Assets</span></div>
+      <div><strong id="scan-state">Idle</strong><span>Scan status</span></div>
+      <div><strong id="change-count">0</strong><span>Recent changes</span></div></section>
+    <section class="panel"><h2>Assets</h2><div id="assets" class="table-wrap"></div></section>
+    <section class="panel"><h2>Change history</h2><div id="changes" class="table-wrap"></div></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
